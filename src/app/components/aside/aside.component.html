@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let menuItem of menuItems" [style]="{'backgroundColor': menuItem.color}"
+      (click)="setMenuStatus(menuItem)">
+    <a>{{menuItem.value}}</a>
+  </li>
+</ul>

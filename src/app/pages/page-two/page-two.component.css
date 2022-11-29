@@ -1,0 +1,14 @@
+.page-two {
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+}
+
+.page-two h2 {
+  background-color: aliceblue;
+  margin-top: 100px;
+  padding-top: 5px;
+  height: 35px;
+  width: 50%;
+  margin-left: 25%;
+}

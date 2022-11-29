@@ -1,0 +1,21 @@
+ul {
+  list-style: none;
+  margin-top: 55px;
+}
+
+ul li {
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 10px;
+  height: 30px;
+  background-color: aliceblue;
+  width: 80%;
+  transition: all 400ms;
+}
+
+ul li:hover {
+  cursor: pointer;
+  transition: all 400ms;
+  background-color: #ccc;
+  scale: 1.05;
+}

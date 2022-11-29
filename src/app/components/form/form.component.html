@@ -1,0 +1,40 @@
+<div *ngIf="newForm" class="form">
+  <form [formGroup]="newForm" (ngSubmit)="addForm()">
+    <div>
+      <input type="text" id="field_1" formControlName="field_1" aria-describedby="field_1" placeholder="field_1">
+      <span
+        *ngIf="newForm.get('field_1')?.dirty &&  newForm.get('field_1')?.hasError('required')">
+        field_1 is required
+      </span>
+    </div>
+    <div>
+      <input type="text" id="field_2" formControlName="field_2" aria-describedby="field_2" placeholder="field_2">
+      <span
+        *ngIf="newForm.get('field_2')?.dirty && newForm.get('field_2')?.hasError('required')">
+        field_2 is required
+      </span>
+    </div>
+    <div>
+      <input type="text" id="field_3" formControlName="field_3" aria-describedby="field_3" placeholder="field_3">
+      <span
+        *ngIf="newForm.get('field_3')?.dirty && newForm.get('field_3')?.hasError('required')">
+        field_3 is required
+      </span>
+    </div>
+    <div>
+      <input type="text" id="field_4" formControlName="field_4" aria-describedby="field_4" placeholder="field_4">
+      <span
+        *ngIf="newForm.get('field_4')?.dirty && newForm.get('field_4')?.hasError('required')">
+        field_1 is required
+      </span>
+    </div>
+    <div>
+      <button type="reset" [style]="{'backgroundColor': color}"
+              [disabled]="(newForm.get('field_1')?.hasError('required') && newForm.get('field_2')?.hasError('required') && newForm.get('field_3')?.hasError('required') && newForm.get('field_4')?.hasError('required'))">
+        RESET
+      </button>
+      <button type="submit" [style]="{'backgroundColor': color}" [disabled]="!newForm.valid">SUBMIT</button>
+    </div>
+  </form>
+</div>
+
